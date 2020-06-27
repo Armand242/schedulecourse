@@ -127,7 +127,7 @@ def student():
     return render_template('students.html')
 
 
-
+@app.route('/')
 @app.route('/home')
 def home():
     return render_template("home.html")

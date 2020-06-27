@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+   <body>
+      <h3>Students </h3>
+      <hr/>
+
+      {%- for category, message in get_flashed_messages(with_categories = true) %}
+         <div class = "alert alert-danger">
+            {{ message }}
+         </div>
+      {%- endfor %}
+
+      <form action = "{{ request.path }}" method = "post">
+         <p>
+            <i>Courses Information</i>
+         </p>
+         <label>Course number:</label><br>
+         <input type = "text" name = "course_num" /><br>
+         <br>
+         <label>Semester:</label><br>
+         <input type = "text" name = "semester" /><br>
+         <br>
+         <label>Time and location:</label><br>
+         <input name = "time" /><br>
+         <br>
+         <label>Course name:</label><br>
+         <input type = "text" name = "course_name" /><br>
+         <br>
+         <label>Course level:</label><br>
+         <input type = "text" name = "course_level" /><br>
+         <br>
+         <label>Course description:</label><br>
+         <input type = "text" name = "course_des" /><br>
+         <br>
+         <label>Course prerequisites:</label><br>
+         <input type = "text" name = "course_prereq" /><br>
+         <br>
+         <br>
+         <p>
+            <i>Instructor Information</i>
+         </p>
+
+         <label>Instructor number:</label><br>
+         <input type = "text" name = "instructor_num" /><br>
+         <br>
+         <label>Instructor name:</label><br>
+         <input type = "text" name = "instructor_name" /><br>
+         <br>
+         <label>Instructor BD:</label><br>
+         <input type = "text" name = "instructor_BD" /><br>
+         <br>
+         <label>Instructor gender:</label><br>
+         <input type = "text" name = "instructor_gender" /><br>
+         <br>
+         <label>Instructor nationality:</label><br>
+         <input type = "text" name = "instructor_nationality" /><br>
+         <br>
+         <label>Instructor education:</label><br>
+         <input type = "text" name = "instructor_edu" /><br>
+         <br>
+         <label>Instructor degree:</label><br>
+         <input type = "text" name = "instructor_degree" /><br>
+         <br>
+         <label>Instructor biography:</label><br>
+         <input type = "text" name = "instructor_bio" /><br>
+         <br>
+         <br>
+         <input type = "submit" value = "Submit Form" />
+      </form>
+
+   </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+   <body>
+      <h3>Students </h3>
+      <hr/>
+
+      {%- for category, message in get_flashed_messages(with_categories = true) %}
+         <div class = "alert alert-danger">
+            {{ message }}
+         </div>
+      {%- endfor %}
+
+      <form action = "{{ request.path }}" method = "post">
+         <p>
+            <i>Courses Information</i>
+         </p>
+         <label>Course number:</label><br>
+         <input type = "text" name = "course_num" /><br>
+         <br>
+         <label>student id:</label><br>
+         <input type = "text" name = "studentid" /><br>
+         <br>
+          <label>student name:</label><br>
+         <input type = "text" name = "student_name" /><br>
+         <br>
+
+         <input type = "submit" value = "Enroll" />
+      </form>
+   </body>
+</html>

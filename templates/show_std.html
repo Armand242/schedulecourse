@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head></head>
+   <body>
+      <h3>
+         <a href = "{{ url_for('show_std') }}">Course Schedule Form</a>
+      </h3>
+
+      <hr/>
+      {%- for message in get_flashed_messages() %}
+         {{ message }}
+      {%- endfor %}
+
+      <h3>Courses (<a href = "{{ url_for('new') }}">Enroll in Course</a>)</h3>
+
+      <table>
+         <thead>
+            <tr>
+               <th>course_num</th>
+               <th>std_id</th>
+               <th>std_name</th>
+            </tr>
+         </thead>
+
+         <tbody>
+            {% for s in Students %}
+               <tr>
+                  <td>{{ s.course_num }}</td>
+                  <td>{{ s.std_id }}</td>
+                  <td>{{ s.std_name }}</td>
+               </tr>
+            {% endfor %}
+
+         </tbody>
+      </table>
+   </body>
+</html>

@@ -126,6 +126,12 @@ def student():
             return redirect(url_for('show_all'))
     return render_template('students.html')
 
+
+
+@app.route('/home')
+def home():
+    return render_template("home.html")
+
 if __name__ == '__main__':
     db.create_all()
     app.run(debug=True)
